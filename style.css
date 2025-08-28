@@ -1,0 +1,874 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+/* Main Container */
+.report-container {
+  width: 900px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 0;
+}
+
+/* Header Section */
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: #f0f0f0;
+}
+
+.report-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.file-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.file-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.file-field label {
+  font-weight: bold;
+  min-width: 40px;
+}
+
+.file-input {
+  border: none;
+  border-bottom: 1px solid #000;
+  width: 80px;
+  font-size: 11px;
+  background-color: #f0f0f0;
+}
+
+/* Form Table Container - only the form has border */
+.form-table-container {
+  border: 2px solid #000;
+}
+
+/* Section Wrapper */
+.section-wrapper {
+  display: flex;
+  border-bottom: 2px solid #000;
+}
+
+.section-wrapper:first-of-type .section-content {
+  border-top: none;
+}
+
+/* Vertical Labels */
+.vertical-label {
+  background-color: #bfbfbf;
+  border-right: 2px solid #000;
+  width: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  padding: 10px 0;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.subject-label {
+  background-color: #bfbfbf;
+}
+
+/* Section Content */
+.section-content {
+  flex: 1;
+  padding: 0;
+  border-top: 1px solid #000;
+}
+
+/* Property Table Styles */
+.property-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  table-layout: fixed;
+}
+
+.table-row {
+  border-bottom: 1px solid #000;
+  height: 35px;
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.table-cell {
+  padding: 4px 4px;
+  vertical-align: middle;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.table-cell:last-child {
+  border-right: none;
+}
+
+/* Divider line between Occupant and Project Type */
+.table-cell.with-divider::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #000;
+  z-index: 1;
+}
+
+.table-cell label {
+  font-size: 10px;
+  font-weight: normal;
+  margin-right: 4px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.table-cell .text-input {
+  border: none;
+  background-color: transparent;
+  font-size: 10px;
+  padding: 1px 2px;
+  width: 100px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.table-cell .text-input.full-width {
+  width: 95%;
+  max-width: 300px;
+}
+
+.table-cell .text-input.describe-input {
+  width: 50px;
+  margin-left: 3px;
+}
+
+.table-cell .text-input.hoa-input {
+  width: 40px;
+  margin-left: 3px;
+  margin-right: 5px;
+}
+
+/* Checkbox groups */
+.checkbox-group {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  gap: 4px;
+  align-items: center;
+  margin-left: 0;
+  vertical-align: middle;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  margin-right: 4px;
+  font-size: 9px;
+  white-space: nowrap;
+}
+
+.hoa-period {
+  display: inline-flex;
+  gap: 4px;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.hoa-period label {
+  font-size: 9px;
+  white-space: nowrap;
+}
+
+/* Section Wrapper */
+.section-wrapper {
+  display: flex;
+  border-bottom: 2px solid #000;
+}
+
+.section-wrapper:first-of-type .section-content {
+  border-top: none;
+}
+
+/* Vertical Labels */
+.vertical-label {
+  background-color: #bfbfbf;
+  border-right: 2px solid #000;
+  width: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  padding: 10px 0;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.subject-label {
+  background-color: #bfbfbf;
+}
+
+.assignment-label {
+  background-color: #c4c4c4;
+}
+
+/* Section Content */
+.section-content {
+  flex: 1;
+  padding: 0;
+  border-top: 1px solid #000;
+}
+
+/* Form Rows */
+.form-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0;
+  flex-wrap: wrap;
+  padding: 6px 8px;
+  border-bottom: 1px solid #000;
+  min-height: 25px;
+}
+
+.form-row:last-child {
+  margin-bottom: 0;
+}
+
+/* Single Line Layout */
+.single-line {
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 8px;
+}
+
+.single-line label {
+  margin-right: 3px;
+  white-space: nowrap;
+  font-size: 10px;
+}
+
+.single-line input[type="text"] {
+  margin-right: 6px;
+}
+
+.single-line input[type="checkbox"] {
+  margin-right: 2px;
+}
+
+/* Field Groups - Layout Adjustments */
+.field-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.field-group.wide {
+  flex: 2;
+}
+
+.field-group.full-width {
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+/* Specific form row adjustments */
+.form-row .field-group {
+  padding: 0;
+}
+
+.form-row.single-line .field-group {
+  padding: 0;
+}
+
+/* Specific Row Layouts */
+.county-group {
+  margin-right: 20px;
+}
+
+.legal-group {
+  flex: 1;
+}
+
+.owner-group {
+  margin-right: 30px;
+}
+
+.borrower-group {
+  flex: 1;
+}
+
+.client-group,
+.appraiser-group {
+  margin-right: 40px;
+}
+
+.address-group,
+.company-group {
+  flex: 1;
+}
+
+/* Occupant Row Layout */
+.occupant-row {
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Special occupant row with relative positioning for absolute divider */
+.occupant-special {
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Absolute positioned divider */
+.divider-absolute {
+  position: absolute;
+  left: 29%;
+  top: 0;
+  bottom: 0;
+  width: 0.8px;
+  background-color: #000;
+}
+
+.occupant-section,
+.project-section,
+.hoa-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.occupant-section label:first-child,
+.project-section label:first-child,
+.hoa-section label:first-child {
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+/* Checkbox Styles */
+input[type="checkbox"] {
+  margin-right: 2px;
+  transform: scale(0.7);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #000;
+  background-color: white;
+  position: relative;
+  cursor: pointer;
+}
+
+/* X mark when checked */
+input[type="checkbox"]:checked::before {
+  content: "✕";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 8px;
+  font-weight: bold;
+  color: #000;
+  line-height: 1;
+}
+
+label {
+  font-size: 10px;
+  white-space: nowrap;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.field-group > label:first-child {
+  color: #000;
+  margin-right: 8px;
+}
+
+/* Input Fields - Specific Sizing Based on Screenshot */
+.text-input {
+  border: none;
+  padding: 2px 4px;
+  font-size: 10px;
+  background-color: transparent;
+}
+
+/* Inline Input Sizes */
+.text-input.address-inline {
+  width: 200px;
+}
+.text-input.city-inline {
+  width: 100px;
+}
+.text-input.state-inline {
+  width: 40px;
+}
+.text-input.zipcode-inline {
+  width: 60px;
+}
+
+.text-input.assessor-inline {
+  width: 120px;
+}
+.text-input.tax-year-inline {
+  width: 50px;
+}
+.text-input.re-taxes-inline {
+  width: 70px;
+}
+.text-input.special-assess-inline {
+  width: 100px;
+}
+
+.text-input.owner-inline {
+  width: 250px;
+}
+.text-input.borrower-inline {
+  width: 200px;
+}
+
+.text-input.other-describe {
+  width: 100px;
+  margin-left: 4px;
+}
+
+/* Equal length inputs for Client/Appraiser */
+.text-input.client-inline {
+  width: 180px;
+}
+.text-input.address-inline-equal {
+  width: 250px;
+  margin-left: 35px;
+}
+.text-input.appraiser-inline {
+  width: 180px;
+}
+.text-input.company-inline {
+  width: 250px;
+}
+
+/* Intended Use/User inputs */
+.text-input.intended-use-input {
+  width: 100%;
+}
+.text-input.intended-user-input {
+  width: 100%;
+}
+
+/* Legacy sizes for compatibility */
+.text-input.small {
+  width: 60px;
+}
+.text-input.medium {
+  width: 120px;
+}
+.text-input.wide {
+  width: 200px;
+}
+
+/* Property Address Row */
+.text-input.address {
+  width: 300px;
+}
+.text-input.city {
+  width: 150px;
+}
+.text-input.state {
+  width: 50px;
+}
+.text-input.zipcode {
+  width: 80px;
+}
+
+/* County and Legal Description */
+.text-input.county {
+  width: 120px;
+}
+.text-input.legal {
+  width: 450px;
+}
+
+/* Assessor Info Row */
+.text-input.assessor {
+  width: 140px;
+}
+.text-input.tax-year {
+  width: 60px;
+}
+.text-input.re-taxes {
+  width: 80px;
+}
+.text-input.special-assess {
+  width: 120px;
+}
+
+/* Current Owner Row */
+.text-input.owner {
+  width: 300px;
+}
+.text-input.borrower {
+  width: 200px;
+}
+
+/* HOA Field */
+.text-input.hoa {
+  width: 60px;
+}
+
+/* Market Area Row */
+.text-input.market-area {
+  width: 150px;
+}
+.text-input.map-ref {
+  width: 200px;
+}
+.text-input.census {
+  width: 100px;
+}
+
+/* Client/Appraiser Fields */
+.text-input.client {
+  width: 250px;
+}
+.text-input.address-field {
+  width: 300px;
+}
+.text-input.appraiser {
+  width: 250px;
+}
+.text-input.company {
+  width: 300px;
+}
+
+/* Property Address Row */
+.text-input.address {
+  width: 300px;
+}
+.text-input.city {
+  width: 150px;
+}
+.text-input.state {
+  width: 50px;
+}
+.text-input.zipcode {
+  width: 80px;
+}
+
+/* County and Legal Description */
+.text-input.county {
+  width: 120px;
+}
+.text-input.legal {
+  width: 450px;
+}
+
+/* Assessor Info Row */
+.text-input.assessor {
+  width: 140px;
+}
+.text-input.tax-year {
+  width: 60px;
+}
+.text-input.re-taxes {
+  width: 80px;
+}
+.text-input.special-assess {
+  width: 120px;
+}
+
+/* Current Owner Row */
+.text-input.owner {
+  width: 300px;
+}
+.text-input.borrower {
+  width: 200px;
+}
+
+/* HOA Field */
+.text-input.hoa {
+  width: 60px;
+}
+
+/* Market Area Row */
+.text-input.market-area {
+  width: 150px;
+}
+.text-input.map-ref {
+  width: 200px;
+}
+.text-input.census {
+  width: 100px;
+}
+
+/* Client/Appraiser Fields */
+.text-input.client {
+  width: 250px;
+}
+.text-input.address-field {
+  width: 300px;
+}
+.text-input.appraiser {
+  width: 250px;
+}
+.text-input.company {
+  width: 300px;
+}
+
+/* Legacy sizes for compatibility */
+.text-input.small {
+  width: 60px;
+}
+.text-input.medium {
+  width: 120px;
+}
+.text-input.wide {
+  width: 200px;
+}
+
+.textarea-input {
+  border: 1px solid #000;
+  padding: 4px;
+  font-size: 10px;
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  resize: vertical;
+}
+
+.intended-use {
+  height: 40px;
+}
+
+.intended-user {
+  height: 25px;
+}
+
+/* Line Input for Intended Use/User */
+.line-input-container {
+  width: 100%;
+  margin-top: 4px;
+}
+
+.line-input {
+  height: 20px;
+  border: none;
+  border-bottom: 1px solid #000;
+  margin-bottom: 4px;
+  background-color: transparent;
+}
+
+.line-input.full {
+  width: 100%;
+  display: block;
+}
+
+/* Special Row Layouts */
+.county-legal-row,
+.owner-borrower-row,
+.map-census-row,
+.intended-use-row,
+.intended-user-row,
+.client-appraiser-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.single-row {
+  flex-wrap: nowrap !important;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Checkbox Styling */
+.checkbox-item {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 8px;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.checkbox-x {
+  color: transparent;
+  cursor: pointer;
+}
+
+.checkbox-x:hover {
+  color: #000;
+}
+
+.checkbox-x.checked {
+  color: #000;
+}
+
+.checkbox-x.checked::before {
+  content: "X";
+}
+
+/* Divider */
+.divider {
+  margin: 0 12px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #000;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+/* Other Field for Project Type */
+.other-field {
+  margin-left: 8px;
+}
+
+/* Checkbox Styles */
+input[type="checkbox"] {
+  margin-right: 4px;
+  transform: scale(0.8);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #000;
+  background-color: white;
+  position: relative;
+  cursor: pointer;
+}
+
+/* X mark when checked */
+input[type="checkbox"]:checked::before {
+  content: "✕";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  font-weight: bold;
+  color: #000;
+  line-height: 1;
+}
+
+.checkbox-row {
+  align-items: center;
+}
+
+.checkbox-row label {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  font-size: 10px;
+}
+
+/* Specific Text Styles */
+.purpose-text,
+.report-text,
+.approaches-text,
+.property-text {
+  font-size: 10px;
+  margin-right: 8px;
+  font-weight: normal;
+}
+
+.reconciliation-text {
+  font-size: 10px;
+  font-style: italic;
+  margin-left: 8px;
+}
+
+.project-type-label {
+  margin-left: 20px !important;
+  font-weight: bold !important;
+}
+
+/* Focus Styles */
+.text-input:focus,
+.textarea-input:focus {
+  outline: 1px solid #0066cc;
+  background-color: #f8f9ff;
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background-color: white;
+    padding: 0;
+  }
+
+  .report-container {
+    border: 2px solid #000;
+    box-shadow: none;
+  }
+
+  .text-input,
+  .textarea-input {
+    border-bottom: 1px solid #000 !important;
+    background-color: transparent !important;
+  }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 900px) {
+  .report-container {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .form-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .field-group {
+    width: 100%;
+  }
+
+  .text-input.wide,
+  .text-input.medium {
+    width: 100%;
+    max-width: 300px;
+  }
+}

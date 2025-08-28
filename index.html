@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2-4 Unit Residential Appraisal Report</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="report-container">
+      <!-- Header Section -->
+      <div class="header-section">
+        <h1 class="report-title">2-4 UNIT RESIDENTIAL APPRAISAL REPORT</h1>
+        <div class="file-info">
+          <div class="file-field">
+            <label>File No.:</label>
+            <input type="text" class="file-input" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Form Table Container -->
+      <div class="form-table-container">
+        <div class="section-wrapper">
+          <div class="vertical-label subject-label">
+            <span>SUBJECT</span>
+          </div>
+          <div class="section-content">
+            <table class="property-table">
+              <!-- Row 1: Property Address, City, State, Zip Code -->
+              <tr class="table-row">
+                <td class="table-cell">
+                  <label>Property Address:</label>
+                  <input type="text" class="text-input" />
+                </td>
+                <td class="table-cell">
+                  <label>City:</label>
+                  <input type="text" class="text-input" />
+                </td>
+                <td class="table-cell">
+                  <label>State:</label>
+                  <input type="text" class="text-input" />
+                </td>
+                <td class="table-cell">
+                  <label>Zip Code:</label>
+                  <input type="text" class="text-input" />
+                </td>
+              </tr>
+
+              <!-- Row 2: County, Legal Description -->
+              <tr class="table-row">
+                <td class="table-cell">
+                  <label>County:</label>
+                  <input type="text" class="text-input" />
+                </td>
+                <td class="table-cell" colspan="3">
+                  <label>Legal Description:</label>
+                  <input type="text" class="text-input full-width" />
+                </td>
+              </tr>
+
+              <!-- Row 3: Assessor's Parcel #, Tax Year -->
+              <tr class="table-row">
+                <td class="table-cell" colspan="2">
+                  <label>Assessor's Parcel #:</label>
+                  <input type="text" class="text-input" />
+                </td>
+                <td class="table-cell" colspan="2">
+                  <label>Tax Year:</label>
+                  <input type="text" class="text-input" />
+                </td>
+              </tr>
+
+              <!-- Row 4: Current Owner, Borrower -->
+              <tr class="table-row">
+                <td class="table-cell" colspan="2">
+                  <label>Current Owner of Record:</label>
+                  <input type="text" class="text-input" />
+                </td>
+                <td class="table-cell" colspan="2">
+                  <label>Borrower (if applicable):</label>
+                  <input type="text" class="text-input" />
+                </td>
+              </tr>
+
+              <!-- Row 5: Occupant, Project Type, HOA -->
+              <tr class="table-row">
+                <td class="table-cell">
+                  <label>Occupant:</label>
+                  <div class="checkbox-group">
+                    <label><input type="checkbox" /> Owner</label>
+                    <label><input type="checkbox" /> Tenant</label>
+                    <label><input type="checkbox" /> Vacant</label>
+                  </div>
+                </td>
+                <td class="table-cell with-divider">
+                  <label>Project Type:</label>
+                  <div class="checkbox-group">
+                    <label><input type="checkbox" /> PUD</label>
+                    <label><input type="checkbox" /> Other</label>
+                    <input
+                      type="text"
+                      class="text-input describe-input"
+                      placeholder="(describe)"
+                    />
+                  </div>
+                </td>
+                <td class="table-cell" colspan="2">
+                  <label>HOA:</label>
+                  <span>$</span>
+                  <input type="text" class="text-input hoa-input" />
+                  <div class="hoa-period">
+                    <label><input type="checkbox" /> per yr.</label>
+                    <label><input type="checkbox" /> per mo.</label>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- Row 6: Market Area, Map Reference, Census Tract -->
+              <tr class="table-row">
+                <td class="table-cell">
+                  <label>Market Area Name:</label>
+                  <input type="text" class="text-input" />
+                </td>
+                <td class="table-cell">
+                  <label>Map Reference:</label>
+                  <input type="text" class="text-input" />
+                </td>
+                <td class="table-cell" colspan="2">
+                  <label>Census Tract:</label>
+                  <input type="text" class="text-input" />
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!-- Close form-table-container -->
+    </div>
+  </body>
+</html>
