@@ -12,7 +12,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   line-height: 1.2;
-  background-color: #f0f0f0;
+  background-color: #fff;
   padding: 20px;
 }
 
@@ -35,25 +35,40 @@ input[type="checkbox"]:checked::before {
 
 /* Main Container */
 .report-container {
-  width: 900px;
+  width: 1400px;
   margin: 0 auto;
   background-color: white;
   padding: 0;
 }
 
 /* Header Section */
-.header-section {
+.heade.market-label-text {
+  font-size: 12px;
+  font-weight: normal;
+  min-width: 95px; /* Increased from 80px */
+  margin-right: 4px;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+ion {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 8px 12px;
-  background-color: #f0f0f0;
+  background-color: #fff;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .report-title {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
+  flex: 1;
 }
 
 .file-info {
@@ -78,7 +93,7 @@ input[type="checkbox"]:checked::before {
   border-bottom: 1px solid #000;
   width: 80px;
   font-size: 12px;
-  background-color: #f0f0f0;
+  background-color: #fff;
 }
 
 /* Form Table Container - only the form has border */
@@ -134,7 +149,6 @@ input[type="checkbox"]:checked::before {
 
 .table-row {
   border-bottom: 1px solid #000;
-  height: 35px;
 }
 
 .table-row:last-child {
@@ -142,11 +156,11 @@ input[type="checkbox"]:checked::before {
 }
 
 .table-cell {
-  padding: 4px 10px;
+  padding: 6px 12px;
   vertical-align: middle;
   position: relative;
   white-space: nowrap;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .table-cell:last-child {
@@ -178,18 +192,18 @@ input[type="checkbox"]:checked::before {
   background-color: transparent;
   font-size: 12px;
   padding: 1px 2px;
-  width: 100px;
+  width: 140px;
   display: inline-block;
   vertical-align: middle;
 }
 
 .table-cell .text-input.full-width {
   width: 95%;
-  max-width: 300px;
+  max-width: 400px;
 }
 
 .table-cell .text-input.describe-input {
-  width: 50px;
+  width: 110px;
   margin-left: 3px;
 }
 
@@ -253,10 +267,6 @@ input[type="checkbox"]:checked::before {
   font-weight: bold;
   font-size: 14px;
   letter-spacing: 2px;
-}
-
-.subject-label {
-  background-color: #bfbfbf;
 }
 
 .assignment-label {
@@ -456,10 +466,10 @@ label {
 
 /* Inline Input Sizes */
 .text-input.address-inline {
-  width: 200px;
+  width: 240px;
 }
 .text-input.city-inline {
-  width: 100px;
+  width: 120px;
 }
 .text-input.state-inline {
   width: 40px;
@@ -478,18 +488,18 @@ label {
   width: 70px;
 }
 .text-input.special-assess-inline {
-  width: 100px;
+  width: 120px;
 }
 
 .text-input.owner-inline {
-  width: 250px;
+  width: 350px;
 }
 .text-input.borrower-inline {
-  width: 200px;
+  width: 240px;
 }
 
 .text-input.other-describe {
-  width: 100px;
+  width: 120px;
   margin-left: 4px;
 }
 
@@ -498,14 +508,14 @@ label {
   width: 180px;
 }
 .text-input.address-inline-equal {
-  width: 250px;
+  width: 350px;
   margin-left: 35px;
 }
 .text-input.appraiser-inline {
   width: 180px;
 }
 .text-input.company-inline {
-  width: 250px;
+  width: 350px;
 }
 
 /* Intended Use/User inputs */
@@ -524,15 +534,15 @@ label {
   width: 120px;
 }
 .text-input.wide {
-  width: 200px;
+  width: 240px;
 }
 
 /* Property Address Row */
 .text-input.address {
-  width: 300px;
+  width: 350px;
 }
 .text-input.city {
-  width: 150px;
+  width: 180px;
 }
 .text-input.state {
   width: 50px;
@@ -565,10 +575,10 @@ label {
 
 /* Current Owner Row */
 .text-input.owner {
-  width: 300px;
+  width: 350px;
 }
 .text-input.borrower {
-  width: 200px;
+  width: 240px;
 }
 
 /* HOA Field */
@@ -578,35 +588,35 @@ label {
 
 /* Market Area Row */
 .text-input.market-area {
-  width: 150px;
+  width: 180px;
 }
 .text-input.map-ref {
-  width: 200px;
+  width: 240px;
 }
 .text-input.census {
-  width: 100px;
+  width: 120px;
 }
 
 /* Client/Appraiser Fields */
 .text-input.client {
-  width: 250px;
+  width: 350px;
 }
 .text-input.address-field {
-  width: 300px;
+  width: 350px;
 }
 .text-input.appraiser {
-  width: 250px;
+  width: 350px;
 }
 .text-input.company {
-  width: 300px;
+  width: 350px;
 }
 
 /* Property Address Row */
 .text-input.address {
-  width: 300px;
+  width: 350px;
 }
 .text-input.city {
-  width: 150px;
+  width: 180px;
 }
 .text-input.state {
   width: 50px;
@@ -639,10 +649,10 @@ label {
 
 /* Current Owner Row */
 .text-input.owner {
-  width: 300px;
+  width: 350px;
 }
 .text-input.borrower {
-  width: 200px;
+  width: 240px;
 }
 
 /* HOA Field */
@@ -652,27 +662,27 @@ label {
 
 /* Market Area Row */
 .text-input.market-area {
-  width: 150px;
+  width: 180px;
 }
 .text-input.map-ref {
-  width: 200px;
+  width: 240px;
 }
 .text-input.census {
-  width: 100px;
+  width: 120px;
 }
 
 /* Client/Appraiser Fields */
 .text-input.client {
-  width: 250px;
+  width: 350px;
 }
 .text-input.address-field {
-  width: 300px;
+  width: 350px;
 }
 .text-input.appraiser {
-  width: 250px;
+  width: 350px;
 }
 .text-input.company {
-  width: 300px;
+  width: 350px;
 }
 
 /* Legacy sizes for compatibility */
@@ -683,7 +693,7 @@ label {
   width: 120px;
 }
 .text-input.wide {
-  width: 200px;
+  width: 240px;
 }
 
 .textarea-input {
@@ -823,6 +833,235 @@ label {
   background-color: #f8f9ff;
 }
 
+/* Market Area Specific Styles */
+.market-row {
+  height: auto;
+  min-height: 120px;
+}
+
+.market-cell {
+  vertical-align: top;
+  white-space: normal;
+  padding: 8px;
+  border-right: 1px solid #000;
+}
+
+/* Specific widths for market area columns */
+.market-cell:nth-child(1) {
+  width: 35%; /* First cell gets more space */
+}
+
+.market-cell:nth-child(2) {
+  width: 15%; /* Predominant Occupancy - narrower */
+}
+
+.market-cell:nth-child(3) {
+  width: 18%; /* 2-4 Unit Housing */
+}
+
+.market-cell:nth-child(4) {
+  width: 16%; /* Present Land Use */
+}
+
+.market-cell:nth-child(5) {
+  width: 16%; /* Change in Land Use */
+}
+
+.market-cell:last-child {
+  border-right: none;
+}
+
+.market-line {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  min-height: 20px;
+}
+
+.market-title {
+  font-weight: bold;
+  font-size: 12px;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.market-label-text {
+  font-size: 12px;
+  font-weight: normal;
+  min-width: 95px;
+  margin-right: 6px;
+  flex-shrink: 0;
+}
+
+/* Checkbox alignment in cell 1 */
+.market-line label {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 12px;
+  margin-right: 8px;
+}
+
+.market-line input[type="checkbox"] {
+  margin: 0;
+  margin-right: 3px;
+}
+
+.market-input {
+  width: 60px;
+  margin: 0 2px;
+}
+
+.market-input-small {
+  width: 30px;
+  margin: 0 2px;
+}
+
+.market-input-wide {
+  width: 120px;
+  margin: 0 2px;
+}
+
+.market-header {
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  min-width: 40px;
+}
+
+.market-spacer {
+  min-width: 20px;
+}
+
+/* Cell 3 specific styling for 2-4 Unit Housing */
+.market-header-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.market-col-header {
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  flex: 1;
+}
+
+.market-subheader-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.market-subheader {
+  font-size: 12px;
+  text-align: center;
+  flex: 1;
+}
+
+.market-data-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  margin-bottom: 2px;
+  padding: 0 8px; /* Add padding so inputs aren't too close to edges */
+}
+
+.market-value-input {
+  width: 50px;
+  font-size: 12px;
+  text-align: center;
+  border: none;
+  background: transparent;
+  justify-self: center; /* Center under PRICE column */
+}
+
+.market-age-input {
+  width: 30px;
+  font-size: 12px;
+  text-align: center;
+  border: none;
+  background: transparent;
+  justify-self: center; /* Center under AGE column */
+}
+
+.market-label {
+  font-size: 12px;
+  text-align: center;
+  justify-self: center;
+}
+
+/* Add lines under Low and High rows */
+.market-data-row:nth-child(4), /* Low row */
+.market-data-row:nth-child(5) {
+  /* High row */
+  border-bottom: 1px solid #000;
+  padding-bottom: 2px;
+  margin-left: -8px; /* Extend line to full width */
+  margin-right: -8px; /* Extend line to full width */
+}
+
+/* Cell 4 specific styling for Present Land Use */
+.land-use-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  margin-bottom: 2px;
+  padding: 0 8px;
+  gap: 4px;
+}
+
+.land-use-label {
+  font-size: 12px;
+  text-align: left;
+  justify-self: start;
+}
+
+.land-use-input {
+  width: 30px;
+  font-size: 12px;
+  text-align: center;
+  border: none;
+  background: transparent;
+  justify-self: end; /* Align all inputs to the right */
+}
+
+.percent-symbol {
+  font-size: 12px;
+  text-align: left;
+  justify-self: start;
+}
+
+.land-use-row:nth-child(2), /* One-Unit */
+.land-use-row:nth-child(3), /* 2-4 Unit */
+.land-use-row:nth-child(4), /* Multi-Unit */
+.land-use-row:nth-child(5),
+.land-use-row:nth-child(6) {
+  /* Comm'l */
+  border-bottom: 1px solid #000;
+  padding-bottom: 2px;
+  margin-left: -8px; /* Extend line to full width */
+  margin-right: -8px; /* Extend line to full width */
+}
+
+.market-description {
+  width: 100%;
+  margin-top: 4px;
+}
+
+.market-description-section {
+  padding: 8px;
+  border-top: 1px solid #000;
+}
+
+.market-description-section label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+}
+
 /* Print Styles */
 @media print {
   body {
@@ -862,6 +1101,6 @@ label {
   .text-input.wide,
   .text-input.medium {
     width: 100%;
-    max-width: 300px;
+    max-width: 350px;
   }
 }

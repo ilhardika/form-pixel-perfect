@@ -10,11 +10,13 @@
     <div class="report-container">
       <!-- Header Section -->
       <div class="header-section">
-        <h1 class="report-title">2-4 UNIT RESIDENTIAL APPRAISAL REPORT</h1>
-        <div class="file-info">
-          <div class="file-field">
-            <label>File No.:</label>
-            <input type="text" class="file-input" />
+        <div class="header-content">
+          <h1 class="report-title">2-4 UNIT RESIDENTIAL APPRAISAL REPORT</h1>
+          <div class="file-info">
+            <div class="file-field">
+              <label>File No.:</label>
+              <input type="text" class="file-input" />
+            </div>
           </div>
         </div>
       </div>
@@ -241,6 +243,167 @@
                 </td>
               </tr>
             </table>
+          </div>
+        </div>
+
+        <!-- MARKET AREA DESCRIPTION Section -->
+        <div class="section-wrapper">
+          <div class="vertical-label market-label">
+            <span>MARKET AREA DESCRIPTION</span>
+          </div>
+          <div class="section-content">
+            <table class="property-table">
+              <!-- Row 1: Complex multi-line cells -->
+              <tr class="table-row market-row">
+                <!-- Cell 1: Location, Built up, Growth rate, etc. -->
+                <td class="table-cell market-cell">
+                  <div class="market-line">
+                    <span class="market-label-text">Location:</span>
+                    <label><input type="checkbox" /> Urban</label>
+                    <label><input type="checkbox" /> Suburban</label>
+                    <label><input type="checkbox" /> Rural</label>
+                  </div>
+                  <div class="market-line">
+                    <span class="market-label-text">Built up:</span>
+                    <label><input type="checkbox" /> Over 75%</label>
+                    <label><input type="checkbox" /> 25-75%</label>
+                    <label><input type="checkbox" /> Under 25%</label>
+                  </div>
+                  <div class="market-line">
+                    <span class="market-label-text">Growth rate:</span>
+                    <label><input type="checkbox" /> Rapid</label>
+                    <label><input type="checkbox" /> Stable</label>
+                    <label><input type="checkbox" /> Slow</label>
+                  </div>
+                  <div class="market-line">
+                    <span class="market-label-text">Property values:</span>
+                    <label><input type="checkbox" /> Increasing</label>
+                    <label><input type="checkbox" /> Stable</label>
+                    <label><input type="checkbox" /> Declining</label>
+                  </div>
+                  <div class="market-line">
+                    <span class="market-label-text">Demand/supply:</span>
+                    <label><input type="checkbox" /> Shortage</label>
+                    <label><input type="checkbox" /> In Balance</label>
+                    <label><input type="checkbox" /> Over Supply</label>
+                  </div>
+                  <div class="market-line">
+                    <span class="market-label-text">Marketing time:</span>
+                    <label><input type="checkbox" /> Under 3 Mos.</label>
+                    <label><input type="checkbox" /> 3-6 Mos.</label>
+                    <label><input type="checkbox" /> Over 6 Mos.</label>
+                  </div>
+                </td>
+
+                <!-- Cell 2: Predominant Occupancy -->
+                <td class="table-cell market-cell">
+                  <div class="market-title">Predominant Occupancy</div>
+                  <div class="market-line">
+                    <label><input type="checkbox" /> Owner</label>
+                  </div>
+                  <div class="market-line">
+                    <label><input type="checkbox" /> Tenant</label>
+                  </div>
+                  <div class="market-line">
+                    <label><input type="checkbox" /> Vacant (0-5%)</label>
+                  </div>
+                  <div class="market-line">
+                    <label><input type="checkbox" /> Vacant (>5%)</label>
+                  </div>
+                </td>
+
+                <!-- Cell 3: 2-4 Unit Housing -->
+                <td class="table-cell market-cell">
+                  <div class="market-title">2 - 4 Unit Housing</div>
+                  <div class="market-header-row">
+                    <span class="market-col-header">PRICE</span>
+                    <span class="market-col-header">AGE</span>
+                  </div>
+                  <div class="market-subheader-row">
+                    <span class="market-subheader">$(000)</span>
+                    <span class="market-subheader">(yrs)</span>
+                  </div>
+                  <div class="market-data-row">
+                    <input type="text" class="market-value-input" />
+                    <span class="market-label">Low</span>
+                    <input type="text" class="market-age-input" />
+                  </div>
+                  <div class="market-data-row">
+                    <input type="text" class="market-value-input" />
+                    <span class="market-label">High</span>
+                    <input type="text" class="market-age-input" />
+                  </div>
+                  <div class="market-data-row">
+                    <input type="text" class="market-value-input" />
+                    <span class="market-label">Pred</span>
+                    <input type="text" class="market-age-input" />
+                  </div>
+                </td>
+
+                <!-- Cell 4: Present Land Use -->
+                <td class="table-cell market-cell">
+                  <div class="market-title">Present Land Use</div>
+                  <div class="land-use-row">
+                    <span class="land-use-label">One-Unit</span>
+                    <input type="text" class="land-use-input" />
+                    <span class="percent-symbol">%</span>
+                  </div>
+                  <div class="land-use-row">
+                    <span class="land-use-label">2-4 Unit</span>
+                    <input type="text" class="land-use-input" />
+                    <span class="percent-symbol">%</span>
+                  </div>
+                  <div class="land-use-row">
+                    <span class="land-use-label">Multi-Unit</span>
+                    <input type="text" class="land-use-input" />
+                    <span class="percent-symbol">%</span>
+                  </div>
+                  <div class="land-use-row">
+                    <span class="land-use-label">Comm'l</span>
+                    <input type="text" class="land-use-input" />
+                    <span class="percent-symbol">%</span>
+                  </div>
+                  <div class="land-use-row">
+                    <span class="land-use-label"></span>
+                    <!-- Empty label for alignment -->
+                    <input type="text" class="land-use-input" />
+                    <span class="percent-symbol">%</span>
+                  </div>
+                </td>
+
+                <!-- Cell 5: Change in Land Use -->
+                <td class="table-cell market-cell">
+                  <div class="market-title">Change in Land Use</div>
+                  <div class="market-line">
+                    <label><input type="checkbox" /> Not Likely</label>
+                  </div>
+                  <div class="market-line">
+                    <label><input type="checkbox" /> Likely</label>
+                    <span>*</span>
+                    <label><input type="checkbox" /> In Process</label>
+                    <span>*</span>
+                  </div>
+                  <div class="market-line">
+                    <span>* To:</span>
+                    <input type="text" class="text-input market-input-wide" />
+                  </div>
+                </td>
+              </tr>
+            </table>
+
+            <!-- Market Area Description Text Area - Separate from table -->
+            <div class="market-description-section">
+              <label
+                >Market Area Boundaries, Description, and Market Conditions
+                (including support for the above characteristics and
+                trends):</label
+              >
+              <textarea
+                class="textarea-input market-description"
+                rows="6"
+                placeholder="The subject is located in the Beach Barber Tract area of La Jolla, a community of the city of San Diego. The area is comprised primarily of average to excellent quality SFRs, condos and multi-family dwellings with some commercial properties. All public services are located nearby. The current market is increasing (see page 4 for details and market support). Typical marketing times for properties in the subject's market range from zero to three months. Financing is primarily conventional with some VA, FHA and cash transactions. Seller paid concessions have occurred in the market and are considered typical up to three percent of the purchase price."
+              ></textarea>
+            </div>
           </div>
         </div>
       </div>
