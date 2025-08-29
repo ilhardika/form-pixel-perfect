@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2-4 Unit Residential Appraisal Report</title>
+    <title>Page 1</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -128,6 +128,115 @@
                 </td>
                 <td class="table-cell" colspan="2">
                   <label>Census Tract:</label>
+                  <input type="text" class="text-input" />
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- ASSIGNMENT Section -->
+        <div class="section-wrapper">
+          <div class="vertical-label assignment-label">
+            <span>ASSIGNMENT</span>
+          </div>
+          <div class="section-content">
+            <table class="property-table">
+              <!-- Row 1: Purpose of appraisal -->
+              <tr class="table-row">
+                <td class="table-cell" colspan="4">
+                  <label
+                    >The purpose of this appraisal is to develop an opinion
+                    of:</label
+                  >
+                  <label
+                    ><input type="checkbox" /> Market Value (as defined)</label
+                  >
+                  <label
+                    ><input type="checkbox" /> or other type of value
+                    (describe)</label
+                  >
+                  <input type="text" class="text-input full-width" />
+                </td>
+              </tr>
+
+              <!-- Row 2: Report value -->
+              <tr class="table-row">
+                <td class="table-cell" colspan="4">
+                  <label
+                    >This report reflects the following value (if not Current,
+                    see comments):</label
+                  >
+                  <label
+                    ><input type="checkbox" /> Current (the Inspection Date is
+                    the Effective Date)</label
+                  >
+                  <label><input type="checkbox" /> Retrospective</label>
+                  <label><input type="checkbox" /> Prospective</label>
+                </td>
+              </tr>
+
+              <!-- Row 3: Approaches -->
+              <tr class="table-row">
+                <td class="table-cell" colspan="4">
+                  <label>Approaches developed for this appraisal:</label>
+                  <label
+                    ><input type="checkbox" /> Sales Comparison Approach</label
+                  >
+                  <label><input type="checkbox" /> Cost Approach</label>
+                  <label><input type="checkbox" /> Income Approach</label>
+                  <span>(See Reconciliation Comments and Scope of Work)</span>
+                </td>
+              </tr>
+
+              <!-- Row 4: Property Rights -->
+              <tr class="table-row">
+                <td class="table-cell" colspan="4">
+                  <label>Property Rights Appraised:</label>
+                  <label><input type="checkbox" /> Fee Simple</label>
+                  <label><input type="checkbox" /> Leasehold</label>
+                  <label><input type="checkbox" /> Leased Fee</label>
+                  <label><input type="checkbox" /> Other (describe)</label>
+                  <input type="text" class="text-input" />
+                </td>
+              </tr>
+
+              <!-- Row 5: Intended Use -->
+              <tr class="table-row">
+                <td class="table-cell" colspan="4">
+                  <label>Intended Use:</label>
+                  <input type="text" class="text-input full-width" />
+                </td>
+              </tr>
+
+              <!-- Row 6: Intended User(s) -->
+              <tr class="table-row">
+                <td class="table-cell" colspan="4">
+                  <label>Intended User(s) (by name or type):</label>
+                  <input type="text" class="text-input full-width" />
+                </td>
+              </tr>
+
+              <!-- Row 7: Client and Address -->
+              <tr class="table-row">
+                <td class="table-cell" colspan="2">
+                  <label>Client:</label>
+                  <input type="text" class="text-input" />
+                </td>
+                <td class="table-cell" colspan="2">
+                  <label>Address:</label>
+                  <input type="text" class="text-input" />
+                </td>
+              </tr>
+
+              <!-- Row 8: Appraiser and Address -->
+              <tr class="table-row">
+                <td class="table-cell" colspan="2">
+                  <label>Appraiser:</label>
+                  <input type="text" class="text-input" />
+                </td>
+                <td class="table-cell" colspan="2">
+                  <label>Address:</label>
                   <input type="text" class="text-input" />
                 </td>
               </tr>

@@ -10,10 +10,27 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.2;
   background-color: #f0f0f0;
   padding: 20px;
+}
+
+/* Main Container */
+.report-containe/* X mark when checked */
+input[type="checkbox"]:checked::before {
+  content: "✕";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  font-weight: bold;
+  color: #000;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Main Container */
@@ -34,7 +51,7 @@ body {
 }
 
 .report-title {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
@@ -60,7 +77,7 @@ body {
   border: none;
   border-bottom: 1px solid #000;
   width: 80px;
-  font-size: 11px;
+  font-size: 12px;
   background-color: #f0f0f0;
 }
 
@@ -91,7 +108,7 @@ body {
   text-orientation: mixed;
   padding: 10px 0;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: 2px;
 }
 
@@ -125,7 +142,7 @@ body {
 }
 
 .table-cell {
-  padding: 4px 4px;
+  padding: 4px 10px;
   vertical-align: middle;
   position: relative;
   white-space: nowrap;
@@ -149,7 +166,7 @@ body {
 }
 
 .table-cell label {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: normal;
   margin-right: 4px;
   display: inline-block;
@@ -159,7 +176,7 @@ body {
 .table-cell .text-input {
   border: none;
   background-color: transparent;
-  font-size: 10px;
+  font-size: 12px;
   padding: 1px 2px;
   width: 100px;
   display: inline-block;
@@ -196,7 +213,7 @@ body {
   display: flex;
   align-items: center;
   margin-right: 4px;
-  font-size: 9px;
+  font-size: 12px;
   white-space: nowrap;
 }
 
@@ -208,7 +225,7 @@ body {
 }
 
 .hoa-period label {
-  font-size: 9px;
+  font-size: 12px;
   white-space: nowrap;
 }
 
@@ -234,7 +251,7 @@ body {
   text-orientation: mixed;
   padding: 10px 0;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: 2px;
 }
 
@@ -280,7 +297,7 @@ body {
 .single-line label {
   margin-right: 3px;
   white-space: nowrap;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .single-line input[type="text"] {
@@ -386,16 +403,17 @@ body {
 /* Checkbox Styles */
 input[type="checkbox"] {
   margin-right: 2px;
-  transform: scale(0.7);
+  transform: scale(0.8);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  width: 12px;
-  height: 12px;
+  width: 16px;
+  height: 16px;
   border: 1px solid #000;
   background-color: white;
   position: relative;
   cursor: pointer;
+  vertical-align: middle;
 }
 
 /* X mark when checked */
@@ -405,14 +423,17 @@ input[type="checkbox"]:checked::before {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 8px;
+  font-size: 12px;
   font-weight: bold;
   color: #000;
   line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 label {
-  font-size: 10px;
+  font-size: 12px;
   white-space: nowrap;
   font-weight: normal;
   display: flex;
@@ -429,7 +450,7 @@ label {
 .text-input {
   border: none;
   padding: 2px 4px;
-  font-size: 10px;
+  font-size: 12px;
   background-color: transparent;
 }
 
@@ -668,7 +689,7 @@ label {
 .textarea-input {
   border: 1px solid #000;
   padding: 4px;
-  font-size: 10px;
+  font-size: 12px;
   font-family: "Roboto", sans-serif;
   width: 100%;
   resize: vertical;
@@ -725,7 +746,7 @@ label {
   display: inline-flex;
   align-items: center;
   margin-right: 8px;
-  font-size: 10px;
+  font-size: 12px;
   white-space: nowrap;
 }
 
@@ -750,7 +771,7 @@ label {
 .divider {
   margin: 0 12px;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 12px;
   color: #000;
   height: 100%;
   display: flex;
@@ -763,34 +784,6 @@ label {
   margin-left: 8px;
 }
 
-/* Checkbox Styles */
-input[type="checkbox"] {
-  margin-right: 4px;
-  transform: scale(0.8);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  width: 16px;
-  height: 16px;
-  border: 1px solid #000;
-  background-color: white;
-  position: relative;
-  cursor: pointer;
-}
-
-/* X mark when checked */
-input[type="checkbox"]:checked::before {
-  content: "✕";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 12px;
-  font-weight: bold;
-  color: #000;
-  line-height: 1;
-}
-
 .checkbox-row {
   align-items: center;
 }
@@ -799,7 +792,7 @@ input[type="checkbox"]:checked::before {
   display: flex;
   align-items: center;
   margin-right: 10px;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 /* Specific Text Styles */
@@ -807,13 +800,13 @@ input[type="checkbox"]:checked::before {
 .report-text,
 .approaches-text,
 .property-text {
-  font-size: 10px;
+  font-size: 12px;
   margin-right: 8px;
   font-weight: normal;
 }
 
 .reconciliation-text {
-  font-size: 10px;
+  font-size: 12px;
   font-style: italic;
   margin-left: 8px;
 }

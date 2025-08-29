@@ -33,20 +33,20 @@ This is a **pixel-perfect recreation** form. The project follows a **multi-page,
 ### Custom Checkbox System
 
 - Uses `appearance: none` with custom X mark (`✕`) when checked
-- Size: `12px × 12px` with `transform: scale(0.7)`
-- X styling: `8px font, translate(-50%, -50%)` for perfect centering
+- Size: `16px × 16px` with `transform: scale(0.8)`
+- X styling: `12px font, translate(-50%, -50%)` for perfect centering
 
 ## Component Patterns
 
 ### Vertical Section Labels
 
-- Color-coded: `#bfbfbf`
+- Color-coded: SUBJECT=`#bfbfbf`, ASSIGNMENT=`#c4c4c4`
 - Uses `writing-mode: vertical-rl` with `text-orientation: mixed`
 - Fixed width: `25px` with `border-right: 2px solid #000`
 
 ### Input Field Conventions
 
-- Default: `100px` width, transparent background, `10px` font
+- Default: `100px` width, transparent background, `12px` font
 - Special sizes: describe=`50px`, HOA=`40px`, full-width=`95% max 300px`
 - All inputs: `border: none, background-color: transparent`
 
@@ -66,10 +66,11 @@ This is a **pixel-perfect recreation** form. The project follows a **multi-page,
 
 ### Font System (Roboto family)
 
-- Title: `18px bold`
-- Section labels: `16px bold`
-- Cell labels: `10px normal`
-- Input text: `10px`
+- Title: `16px bold`
+- Section labels: `14px bold`
+- Cell labels: `14px normal`
+- Input text: `12px`
+- Base text: `12px`
 
 ## File Structure
 
