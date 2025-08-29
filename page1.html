@@ -24,7 +24,7 @@
       <!-- Form Table Container -->
       <div class="form-table-container">
         <div class="section-wrapper">
-          <div class="vertical-label subject-label">
+          <div class="section-label bg-default">
             <span>SUBJECT</span>
           </div>
           <div class="section-content">
@@ -139,7 +139,7 @@
 
         <!-- ASSIGNMENT Section -->
         <div class="section-wrapper">
-          <div class="vertical-label assignment-label">
+          <div class="section-label bg-secondary">
             <span>ASSIGNMENT</span>
           </div>
           <div class="section-content">
@@ -248,7 +248,7 @@
 
         <!-- MARKET AREA DESCRIPTION Section -->
         <div class="section-wrapper">
-          <div class="vertical-label market-label">
+          <div class="section-label bg-default">
             <span>MARKET AREA DESCRIPTION</span>
           </div>
           <div class="section-content">
@@ -258,37 +258,37 @@
                 <!-- Cell 1: Location, Built up, Growth rate, etc. -->
                 <td class="table-cell market-cell">
                   <div class="market-line">
-                    <span class="market-label-text">Location:</span>
+                    <span class="label-text">Location:</span>
                     <label><input type="checkbox" /> Urban</label>
                     <label><input type="checkbox" /> Suburban</label>
                     <label><input type="checkbox" /> Rural</label>
                   </div>
                   <div class="market-line">
-                    <span class="market-label-text">Built up:</span>
+                    <span class="label-text">Built up:</span>
                     <label><input type="checkbox" /> Over 75%</label>
                     <label><input type="checkbox" /> 25-75%</label>
                     <label><input type="checkbox" /> Under 25%</label>
                   </div>
                   <div class="market-line">
-                    <span class="market-label-text">Growth rate:</span>
+                    <span class="label-text">Growth rate:</span>
                     <label><input type="checkbox" /> Rapid</label>
                     <label><input type="checkbox" /> Stable</label>
                     <label><input type="checkbox" /> Slow</label>
                   </div>
                   <div class="market-line">
-                    <span class="market-label-text">Property values:</span>
+                    <span class="label-text">Property values:</span>
                     <label><input type="checkbox" /> Increasing</label>
                     <label><input type="checkbox" /> Stable</label>
                     <label><input type="checkbox" /> Declining</label>
                   </div>
                   <div class="market-line">
-                    <span class="market-label-text">Demand/supply:</span>
+                    <span class="label-text">Demand/supply:</span>
                     <label><input type="checkbox" /> Shortage</label>
                     <label><input type="checkbox" /> In Balance</label>
                     <label><input type="checkbox" /> Over Supply</label>
                   </div>
                   <div class="market-line">
-                    <span class="market-label-text">Marketing time:</span>
+                    <span class="label-text">Marketing time:</span>
                     <label><input type="checkbox" /> Under 3 Mos.</label>
                     <label><input type="checkbox" /> 3-6 Mos.</label>
                     <label><input type="checkbox" /> Over 6 Mos.</label>
@@ -297,7 +297,9 @@
 
                 <!-- Cell 2: Predominant Occupancy -->
                 <td class="table-cell market-cell">
-                  <div class="market-title">Predominant Occupancy</div>
+                  <div class="market-title text-center mb-2">
+                    Predominant Occupancy
+                  </div>
                   <div class="market-line">
                     <label><input type="checkbox" /> Owner</label>
                   </div>
@@ -314,66 +316,118 @@
 
                 <!-- Cell 3: 2-4 Unit Housing -->
                 <td class="table-cell market-cell">
-                  <div class="market-title">2 - 4 Unit Housing</div>
-                  <div class="market-header-row">
-                    <span class="market-col-header">PRICE</span>
-                    <span class="market-col-header">AGE</span>
-                  </div>
-                  <div class="market-subheader-row">
-                    <span class="market-subheader">$(000)</span>
-                    <span class="market-subheader">(yrs)</span>
-                  </div>
-                  <div class="market-data-row">
-                    <input type="text" class="market-value-input" />
-                    <span class="market-label">Low</span>
-                    <input type="text" class="market-age-input" />
-                  </div>
-                  <div class="market-data-row">
-                    <input type="text" class="market-value-input" />
-                    <span class="market-label">High</span>
-                    <input type="text" class="market-age-input" />
-                  </div>
-                  <div class="market-data-row">
-                    <input type="text" class="market-value-input" />
-                    <span class="market-label">Pred</span>
-                    <input type="text" class="market-age-input" />
-                  </div>
+                  <div class="title-section">2 - 4 Unit Housing</div>
+                  <table class="table-borderless">
+                    <thead>
+                      <tr>
+                        <th>PRICE<br />$(000)</th>
+                        <th></th>
+                        <th>AGE<br />(yrs)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <input
+                            type="text"
+                            class="input-base input-xs text-center"
+                          />
+                        </td>
+                        <td>Low</td>
+                        <td>
+                          <input
+                            type="text"
+                            class="input-base input-xs text-center"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input
+                            type="text"
+                            class="input-base input-xs text-center"
+                          />
+                        </td>
+                        <td>High</td>
+                        <td>
+                          <input
+                            type="text"
+                            class="input-base input-xs text-center"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input
+                            type="text"
+                            class="input-base input-xs text-center"
+                          />
+                        </td>
+                        <td>Pred</td>
+                        <td>
+                          <input
+                            type="text"
+                            class="input-base input-xs text-center"
+                          />
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </td>
 
                 <!-- Cell 4: Present Land Use -->
                 <td class="table-cell market-cell">
-                  <div class="market-title">Present Land Use</div>
-                  <div class="land-use-row">
-                    <span class="land-use-label">One-Unit</span>
-                    <input type="text" class="land-use-input" />
+                  <div class="market-title text-center mb-2">
+                    Present Land Use
+                  </div>
+                  <div class="land-use-row grid-3-col-even mb-1">
+                    <span class="land-use-label text-left">One-Unit</span>
+                    <input
+                      type="text"
+                      class="input-base input-xs text-center"
+                    />
                     <span class="percent-symbol">%</span>
                   </div>
-                  <div class="land-use-row">
-                    <span class="land-use-label">2-4 Unit</span>
-                    <input type="text" class="land-use-input" />
+                  <div class="land-use-row grid-3-col-even mb-1">
+                    <span class="land-use-label text-left">2-4 Unit</span>
+                    <input
+                      type="text"
+                      class="input-base input-xs text-center"
+                    />
                     <span class="percent-symbol">%</span>
                   </div>
-                  <div class="land-use-row">
-                    <span class="land-use-label">Multi-Unit</span>
-                    <input type="text" class="land-use-input" />
+                  <div class="land-use-row grid-3-col-even mb-1">
+                    <span class="land-use-label text-left">Multi-Unit</span>
+                    <input
+                      type="text"
+                      class="input-base input-xs text-center"
+                    />
                     <span class="percent-symbol">%</span>
                   </div>
-                  <div class="land-use-row">
-                    <span class="land-use-label">Comm'l</span>
-                    <input type="text" class="land-use-input" />
+                  <div class="land-use-row grid-3-col-even mb-1">
+                    <span class="land-use-label text-left">Comm'l</span>
+                    <input
+                      type="text"
+                      class="input-base input-xs text-center"
+                    />
                     <span class="percent-symbol">%</span>
                   </div>
-                  <div class="land-use-row">
-                    <span class="land-use-label"></span>
+                  <div class="land-use-row grid-3-col-even mb-1">
+                    <span class="land-use-label text-left"></span>
                     <!-- Empty label for alignment -->
-                    <input type="text" class="land-use-input" />
+                    <input
+                      type="text"
+                      class="input-base input-xs text-center"
+                    />
                     <span class="percent-symbol">%</span>
                   </div>
                 </td>
 
                 <!-- Cell 5: Change in Land Use -->
                 <td class="table-cell market-cell">
-                  <div class="market-title">Change in Land Use</div>
+                  <div class="market-title text-center mb-2">
+                    Change in Land Use
+                  </div>
                   <div class="market-line">
                     <label><input type="checkbox" /> Not Likely</label>
                   </div>
@@ -383,9 +437,9 @@
                     <label><input type="checkbox" /> In Process</label>
                     <span>*</span>
                   </div>
-                  <div class="market-line">
+                  <div class="market-line flex-center mb-1">
                     <span>* To:</span>
-                    <input type="text" class="text-input market-input-wide" />
+                    <input type="text" class="input-base input-lg" />
                   </div>
                 </td>
               </tr>
@@ -409,7 +463,7 @@
 
         <!-- SITE DESCRIPTION Section -->
         <div class="section-wrapper">
-          <div class="vertical-label site-label">
+          <div class="section-label bg-tertiary">
             <span>SITE DESCRIPTION</span>
           </div>
           <div class="section-content">

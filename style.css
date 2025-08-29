@@ -1,6 +1,17 @@
 /* Import Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 
+/* CSS Custom Properties for Colors */
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+  --color-bg-default: #bfbfbf;
+  --color-bg-secondary: #c4c4c4;
+  --color-bg-tertiary: #e6e6e6;
+  --color-bg-light: #f8f8f8;
+  --color-border: #000;
+}
+
 /* Reset and Base Styles */
 * {
   margin: 0;
@@ -12,25 +23,213 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   line-height: 1.2;
-  background-color: #fff;
+  background-color: var(--color-white);
   padding: 20px;
 }
 
-/* Main Container */
-.report-containe/* X mark when checked */
-input[type="checkbox"]:checked::before {
-  content: "✕";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 12px;
-  font-weight: bold;
-  color: #000;
-  line-height: 1;
+/* Utility Classes */
+/* Background Color Utilities */
+.bg-default {
+  background-color: var(--color-bg-default);
+}
+.bg-secondary {
+  background-color: var(--color-bg-secondary);
+}
+.bg-tertiary {
+  background-color: var(--color-bg-tertiary);
+}
+.bg-light {
+  background-color: var(--color-bg-light);
+}
+.bg-white {
+  background-color: var(--color-white);
+}
+
+/* Border Utilities */
+.border-1 {
+  border: 1px solid var(--color-border);
+}
+.border-2 {
+  border: 2px solid var(--color-border);
+}
+.border-b-1 {
+  border-bottom: 1px solid var(--color-border);
+}
+.border-b-2 {
+  border-bottom: 2px solid var(--color-border);
+}
+.border-t-1 {
+  border-top: 1px solid var(--color-border);
+}
+.border-r-1 {
+  border-right: 1px solid var(--color-border);
+}
+.border-r-2 {
+  border-right: 2px solid var(--color-border);
+}
+
+/* Layout Utilities */
+.grid-3-col {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.grid-3-col-even {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 4px;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-center {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 4px;
+}
+
+/* Text Alignment Utilities */
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+
+/* Spacing Utilities */
+.mb-1 {
+  margin-bottom: 2px;
+}
+.mb-2 {
+  margin-bottom: 4px;
+}
+.mr-2 {
+  margin-right: 8px;
+}
+.p-2 {
+  padding: 8px;
+}
+
+/* Title Utilities */
+.title-section {
+  font-weight: bold;
+  font-size: 12px;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+/* Input Size Utilities */
+.input-xs {
+  width: 30px;
+}
+.input-sm {
+  width: 40px;
+}
+.input-md {
+  width: 60px;
+}
+.input-lg {
+  width: 120px;
+}
+.input-xl {
+  width: 95%;
+  max-width: 400px;
+}
+
+/* Base Input Styles */
+.input-base {
+  border: none;
+  background-color: transparent;
+  font-size: 12px;
+  padding: 1px 2px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Reusable Table Utilities */
+.table-borderless {
+  width: 100%;
+  border: none;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.table-bordered {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid var(--color-border);
+  padding: 4px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table-bordered th {
+  background-color: var(--color-white);
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 1.2;
+}
+
+/* Width Utilities untuk input */
+.w-full {
+  width: 100%;
+}
+
+/* Legacy Support - use .input-base + utilities instead */
+.housing-table {
+  width: 100%;
+  border: none;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.housing-table th,
+.housing-table td {
+  border: 1px solid var(--color-border);
+  padding: 4px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.housing-table th {
+  background-color: var(--color-white);
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 1.2;
+}
+
+.housing-table td:first-child {
+  font-weight: normal;
+  background-color: var(--color-white);
+}
+
+.housing-input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-size: 12px;
+  text-align: center;
+  padding: 2px;
+}
+
+/* Label Text Utility */
+.label-text {
+  font-size: 12px;
+  font-weight: normal;
+  min-width: 95px;
+  margin-right: 6px;
+  flex-shrink: 0;
 }
 
 /* Main Container */
@@ -42,19 +241,12 @@ input[type="checkbox"]:checked::before {
 }
 
 /* Header Section */
-.heade.market-label-text {
-  font-size: 12px;
-  font-weight: normal;
-  min-width: 95px; /* Increased from 80px */
-  margin-right: 4px;
-  flex-shrink: 0; /* Prevent shrinking */
-}
-ion {
+.header-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 8px 12px;
-  background-color: #fff;
+  background-color: var(--color-white);
 }
 
 .header-content {
@@ -90,10 +282,10 @@ ion {
 
 .file-input {
   border: none;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid var(--color-border);
   width: 80px;
   font-size: 12px;
-  background-color: #fff;
+  background-color: var(--color-white);
 }
 
 /* Form Table Container - only the form has border */
@@ -111,10 +303,10 @@ ion {
   border-top: none;
 }
 
-/* Vertical Labels */
-.vertical-label {
-  background-color: #bfbfbf;
-  border-right: 2px solid #000;
+/* Section Label (formerly vertical-label) */
+.section-label {
+  background-color: var(--color-bg-default);
+  border-right: 2px solid var(--color-border);
   width: 25px;
   display: flex;
   align-items: center;
@@ -125,10 +317,6 @@ ion {
   font-weight: bold;
   font-size: 14px;
   letter-spacing: 2px;
-}
-
-.subject-label {
-  background-color: #bfbfbf;
 }
 
 /* Section Content */
@@ -245,16 +433,19 @@ tr:last-child {
   vertical-align: middle;
 }
 
+/* Legacy support - use input-xl instead */
 .table-cell .text-input.full-width {
   width: 95%;
   max-width: 400px;
 }
 
+/* Legacy support - use input-md instead */
 .table-cell .text-input.describe-input {
   width: 110px;
   margin-left: 3px;
 }
 
+/* Legacy support - use input-sm instead */
 .table-cell .text-input.hoa-input {
   width: 40px;
   margin-left: 3px;
@@ -294,35 +485,20 @@ tr:last-child {
 /* Section Wrapper */
 .section-wrapper {
   display: flex;
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid var(--color-border);
 }
 
 .section-wrapper:first-of-type .section-content {
   border-top: none;
 }
 
-/* Vertical Labels */
-.vertical-label {
-  background-color: #bfbfbf;
-  border-right: 2px solid #000;
-  width: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  padding: 10px 0;
-  font-weight: bold;
-  font-size: 14px;
-  letter-spacing: 2px;
-}
-
+/* Legacy assignment and site label classes - use .section-label with utility bg classes instead */
 .assignment-label {
-  background-color: #c4c4c4;
+  background-color: var(--color-bg-secondary);
 }
 
 .site-label {
-  background-color: #e6e6e6;
+  background-color: var(--color-bg-tertiary);
 }
 
 /* Multi-line cell styling for complex layouts */
@@ -646,7 +822,38 @@ tr:last-child {
   font-weight: bold;
 }
 
-/* Checkbox Styles */
+/* Checkbox Base Styles - Consolidated */
+.checkbox-base {
+  margin-right: 2px;
+  transform: scale(0.8);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-white);
+  position: relative;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.checkbox-base:checked::before {
+  content: "✕";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--color-black);
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Legacy Support */
 input[type="checkbox"] {
   margin-right: 2px;
   transform: scale(0.8);
@@ -655,14 +862,13 @@ input[type="checkbox"] {
   appearance: none;
   width: 16px;
   height: 16px;
-  border: 1px solid #000;
-  background-color: white;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-white);
   position: relative;
   cursor: pointer;
   vertical-align: middle;
 }
 
-/* X mark when checked */
 input[type="checkbox"]:checked::before {
   content: "✕";
   position: absolute;
@@ -671,13 +877,24 @@ input[type="checkbox"]:checked::before {
   transform: translate(-50%, -50%);
   font-size: 12px;
   font-weight: bold;
-  color: #000;
+  color: var(--color-black);
   line-height: 1;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/* Label Base Styles - Consolidated */
+.label-base {
+  font-size: 12px;
+  white-space: nowrap;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+/* Legacy Support */
 label {
   font-size: 12px;
   white-space: nowrap;
@@ -996,17 +1213,36 @@ label {
   white-space: nowrap;
 }
 
+/* Checkbox Utilities */
+.checkbox-hidden {
+  color: transparent;
+  cursor: pointer;
+}
+
+.checkbox-hidden:hover {
+  color: var(--color-black);
+}
+
+.checkbox-hidden.checked {
+  color: var(--color-black);
+}
+
+.checkbox-hidden.checked::before {
+  content: "X";
+}
+
+/* Legacy Support - use .checkbox-hidden instead */
 .checkbox-x {
   color: transparent;
   cursor: pointer;
 }
 
 .checkbox-x:hover {
-  color: #000;
+  color: var(--color-black);
 }
 
 .checkbox-x.checked {
-  color: #000;
+  color: var(--color-black);
 }
 
 .checkbox-x.checked::before {
@@ -1030,6 +1266,20 @@ label {
   margin-left: 8px;
 }
 
+/* Row Layout Utilities */
+.row-center {
+  display: flex;
+  align-items: center;
+}
+
+.row-center label {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+/* Legacy Support - use .row-center instead */
 .checkbox-row {
   align-items: center;
 }
@@ -1041,7 +1291,20 @@ label {
   font-size: 12px;
 }
 
-/* Specific Text Styles */
+/* Text Utility Classes - Replace specific text classes */
+.text-description {
+  font-size: 12px;
+  margin-right: 8px;
+  font-weight: normal;
+}
+
+.text-note {
+  font-size: 12px;
+  font-style: italic;
+  margin-left: 8px;
+}
+
+/* Legacy Support - use .text-description instead */
 .purpose-text,
 .report-text,
 .approaches-text,
@@ -1051,6 +1314,7 @@ label {
   font-weight: normal;
 }
 
+/* Legacy Support - use .text-note instead */
 .reconciliation-text {
   font-size: 12px;
   font-style: italic;
@@ -1069,7 +1333,7 @@ label {
   background-color: #f8f9ff;
 }
 
-/* Market Area Specific Styles */
+/* Market Area - Refactored with Utilities */
 .market-row {
   height: auto;
   min-height: 120px;
@@ -1079,34 +1343,44 @@ label {
   vertical-align: top;
   white-space: normal;
   padding: 8px;
-  border-right: 1px solid #000;
+  border-right: 1px solid var(--color-border);
 }
 
-/* Specific widths for market area columns */
+/* Column width utilities for market area */
+.col-w-35 {
+  width: 35%;
+}
+.col-w-15 {
+  width: 15%;
+}
+.col-w-18 {
+  width: 18%;
+}
+.col-w-16 {
+  width: 16%;
+}
+
+/* Specific widths for market area columns - use width utilities instead */
 .market-cell:nth-child(1) {
-  width: 35%; /* First cell gets more space */
+  width: 35%;
 }
-
 .market-cell:nth-child(2) {
-  width: 15%; /* Predominant Occupancy - narrower */
+  width: 15%;
 }
-
 .market-cell:nth-child(3) {
-  width: 18%; /* 2-4 Unit Housing */
+  width: 18%;
 }
-
 .market-cell:nth-child(4) {
-  width: 16%; /* Present Land Use */
+  width: 16%;
 }
-
 .market-cell:nth-child(5) {
-  width: 16%; /* Change in Land Use */
+  width: 16%;
 }
-
 .market-cell:last-child {
   border-right: none;
 }
 
+/* Base line layout - use .flex-center instead */
 .market-line {
   display: flex;
   align-items: center;
@@ -1116,6 +1390,7 @@ label {
   min-height: 20px;
 }
 
+/* Section title - use .text-center .mb-2 instead */
 .market-title {
   font-weight: bold;
   font-size: 12px;
@@ -1123,6 +1398,16 @@ label {
   text-align: center;
 }
 
+/* Label Text Utility - replaces market-label-text */
+.label-text {
+  font-size: 12px;
+  font-weight: normal;
+  min-width: 95px;
+  margin-right: 6px;
+  flex-shrink: 0;
+}
+
+/* Legacy support - use .label-text instead */
 .market-label-text {
   font-size: 12px;
   font-weight: normal;
@@ -1145,20 +1430,21 @@ label {
   margin-right: 3px;
 }
 
+/* Legacy Support - use utilities instead */
 .market-input {
   width: 60px;
   margin: 0 2px;
 }
-
 .market-input-small {
   width: 30px;
   margin: 0 2px;
 }
-
 .market-input-wide {
   width: 120px;
   margin: 0 2px;
 }
+
+/* Use .input-md, .input-xs, .input-lg instead */
 
 .market-header {
   font-weight: bold;
@@ -1171,7 +1457,7 @@ label {
   min-width: 20px;
 }
 
-/* Cell 3 specific styling for 2-4 Unit Housing */
+/* Header layouts - use .flex-between instead */
 .market-header-row {
   display: flex;
   justify-content: space-between;
@@ -1197,30 +1483,36 @@ label {
   flex: 1;
 }
 
+/* Data row layout - use .grid-3-col .mb-1 .p-2 instead */
 .market-data-row {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   margin-bottom: 2px;
-  padding: 0 8px; /* Add padding so inputs aren't too close to edges */
+  padding: 0 8px;
 }
 
+/* Market input utilities - use base utilities instead */
+.market-value-input,
+.market-age-input,
+.land-use-input {
+  font-size: 12px;
+  text-align: center;
+  border: none;
+  background: transparent;
+  justify-self: center;
+}
+
+/* Legacy Support - use .input-xs .text-center instead */
 .market-value-input {
   width: 50px;
-  font-size: 12px;
-  text-align: center;
-  border: none;
-  background: transparent;
-  justify-self: center; /* Center under PRICE column */
 }
-
 .market-age-input {
   width: 30px;
-  font-size: 12px;
-  text-align: center;
-  border: none;
-  background: transparent;
-  justify-self: center; /* Center under AGE column */
+}
+.land-use-input {
+  width: 30px;
+  justify-self: end;
 }
 
 .market-label {
@@ -1239,7 +1531,7 @@ label {
   margin-right: -8px; /* Extend line to full width */
 }
 
-/* Cell 4 specific styling for Present Land Use */
+/* Land use layout - use .grid-3-col-even .mb-1 .p-2 instead */
 .land-use-row {
   display: grid;
   grid-template-columns: 1fr auto auto;
@@ -1253,15 +1545,6 @@ label {
   font-size: 12px;
   text-align: left;
   justify-self: start;
-}
-
-.land-use-input {
-  width: 30px;
-  font-size: 12px;
-  text-align: center;
-  border: none;
-  background: transparent;
-  justify-self: end; /* Align all inputs to the right */
 }
 
 .percent-symbol {
