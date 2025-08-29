@@ -273,6 +273,46 @@ ion {
   background-color: #c4c4c4;
 }
 
+.site-label {
+  background-color: #e6e6e6;
+}
+
+/* Multi-line cell styling for complex layouts */
+.multi-line-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cell-line {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+/* Bordered inputs for zoning and description */
+.bordered-input {
+  border-bottom: 1px solid #000 !important;
+  background-color: transparent;
+}
+
+/* Wide input for description field */
+.wide-input {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+/* Summary row - no top border */
+.summary-row {
+  border-top: none !important;
+}
+
+.summary-row .table-cell {
+  border-top: none !important;
+}
+
 /* Section Content */
 .section-content {
   flex: 1;

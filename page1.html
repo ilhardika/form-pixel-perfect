@@ -406,6 +406,112 @@
             </div>
           </div>
         </div>
+
+        <!-- SITE DESCRIPTION Section -->
+        <div class="section-wrapper">
+          <div class="vertical-label site-label">
+            <span>SITE DESCRIPTION</span>
+          </div>
+          <div class="section-content">
+            <table class="property-table">
+              <!-- Row 1: Dimensions and Site Area -->
+              <tr class="table-row">
+                <td class="table-cell">
+                  <label>Dimensions:</label>
+                  <input type="text" class="text-input" />
+                </td>
+                <td class="table-cell" colspan="3">
+                  <label>Site Area:</label>
+                  <input type="text" class="text-input" />
+                </td>
+              </tr>
+
+              <!-- Row 2: Zoning Classification, Description, and Compliance -->
+              <tr class="table-row">
+                <td class="table-cell" colspan="4">
+                  <div class="multi-line-cell">
+                    <div class="cell-line">
+                      <label>Zoning Classification:</label>
+                      <input type="text" class="text-input bordered-input" />
+                      <label>Description:</label>
+                      <input
+                        type="text"
+                        class="text-input bordered-input wide-input"
+                      />
+                    </div>
+                    <div class="cell-line">
+                      <label>Zoning Compliance:</label>
+                      <label><input type="checkbox" /> Legal</label>
+                      <label
+                        ><input type="checkbox" /> Legal nonconforming
+                        (grandfathered)</label
+                      >
+                      <label><input type="checkbox" /> Illegal</label>
+                      <label><input type="checkbox" /> No zoning</label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- Row 3: CC&Rs, Ground Rent, and Comments -->
+              <tr class="table-row">
+                <td class="table-cell" colspan="4">
+                  <div class="multi-line-cell">
+                    <div class="cell-line">
+                      <label>Are CC&Rs applicable?</label>
+                      <label><input type="checkbox" /> Yes</label>
+                      <label><input type="checkbox" /> No</label>
+                      <label><input type="checkbox" /> Unknown</label>
+                      <label>Have the documents been reviewed?</label>
+                      <label><input type="checkbox" /> Yes</label>
+                      <label><input type="checkbox" /> No</label>
+                      <label>Ground Rent (if applicable)</label>
+                      <span>$</span>
+                      <input type="text" class="text-input" />
+                      <span>/</span>
+                      <input type="text" class="text-input" />
+                    </div>
+                    <div class="cell-line">
+                      <label>Comments:</label>
+                      <input type="text" class="text-input full-width" />
+                    </div>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- Row 4: Highest & Best Use -->
+              <tr class="table-row">
+                <td class="table-cell" colspan="4">
+                  <div class="multi-line-cell">
+                    <div class="cell-line">
+                      <label>Highest & Best Use as improved:</label>
+                      <label><input type="checkbox" /> Present use, or</label>
+                      <label
+                        ><input type="checkbox" /> Other use (explain)</label
+                      >
+                      <input type="text" class="text-input" />
+                    </div>
+                    <div class="cell-line">
+                      <label>Actual Use as of Effective Date:</label>
+                      <input type="text" class="text-input" />
+                      <label>Use as appraised in this report:</label>
+                      <input type="text" class="text-input" />
+                    </div>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- Row 5: Summary -->
+              <tr class="table-row summary-row">
+                <td class="table-cell" colspan="4">
+                  <label>Summary of Highest & Best Use:</label>
+                  <br />
+                  <textarea class="textarea-input" rows="3"></textarea>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
       </div>
       <!-- Close form-table-container -->
     </div>
