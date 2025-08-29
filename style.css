@@ -93,6 +93,36 @@ body {
   gap: 4px;
 }
 
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-1 {
+  flex: 1;
+}
+.items-center {
+  align-items: center;
+}
+.relative {
+  position: relative;
+}
+
+/* Width Utilities */
+.w-full {
+  width: 100%;
+}
+.min-w-300 {
+  min-width: 300px;
+}
+.max-w-500 {
+  max-width: 500px;
+}
+
 /* Text Alignment Utilities */
 .text-center {
   text-align: center;
@@ -113,6 +143,24 @@ body {
 }
 .p-2 {
   padding: 8px;
+}
+.px-2 {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.pb-2 {
+  padding-bottom: 8px;
+}
+
+/* Gap Utilities */
+.gap-0 {
+  gap: 0px;
+}
+.gap-1 {
+  gap: 4px;
+}
+.gap-2 {
+  gap: 8px;
 }
 
 /* Title Utilities */
@@ -186,7 +234,19 @@ body {
   width: 100%;
 }
 
-/* Legacy Support - use .input-base + utilities instead */
+/* Table Layout with Dividers */
+.flex-1.px-2.relative:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -10px;
+  bottom: -10px;
+  width: 1px;
+  background-color: #000;
+  z-index: 10;
+}
+
+/* Legacy support for old class names */
 .housing-table {
   width: 100%;
   border: none;
@@ -423,6 +483,7 @@ tr:last-child {
   vertical-align: middle;
 }
 
+/* Legacy support - use input-base + size utilities instead */
 .table-cell .text-input {
   border: none;
   background-color: transparent;
@@ -433,7 +494,7 @@ tr:last-child {
   vertical-align: middle;
 }
 
-/* Legacy support - use input-xl instead */
+/* Legacy support - use w-full instead */
 .table-cell .text-input.full-width {
   width: 95%;
   max-width: 400px;
@@ -501,13 +562,14 @@ tr:last-child {
   background-color: var(--color-bg-tertiary);
 }
 
-/* Multi-line cell styling for complex layouts */
+/* Legacy support - use flex flex-col gap-1 instead */
 .multi-line-cell {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
+/* Legacy support - use flex items-center gap-1 flex-wrap border-b-1 pb-2 mb-2 instead */
 .cell-line {
   display: flex;
   align-items: center;
@@ -523,26 +585,36 @@ tr:last-child {
   margin-bottom: 0;
 }
 
-/* Bordered inputs for zoning and description */
+/* Legacy support - use border-b-1 instead */
 .bordered-input {
   border-bottom: 1px solid #000 !important;
   background-color: transparent;
 }
 
-/* Wide input for description field */
+/* Legacy support - use flex-1 min-w-300 max-w-500 instead */
 .wide-input {
   flex: 1;
   min-width: 300px;
   max-width: 500px;
 }
 
-/* Summary row - no top border */
+/* Legacy support - no longer needed as rows don't have top borders by default */
 .summary-row {
   border-top: none !important;
 }
 
 .summary-row .table-cell {
   border-top: none !important;
+}
+
+/* Legacy support - use input-base w-full instead */
+.textarea-input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-size: 12px;
+  padding: 4px;
+  resize: vertical;
 }
 
 /* Utilities, Off-site, and Frontage Tables */
@@ -610,13 +682,14 @@ tr:last-child {
   width: 50px;
 }
 
-/* Three Tables Container - Side by Side Layout */
+/* Legacy support - use flex gap-0 relative instead */
 .three-tables-container {
   display: flex;
   gap: 0px;
   position: relative;
 }
 
+/* Legacy support - use flex-1 px-2 relative instead */
 .table-section {
   flex: 1;
   padding: 0 10px;
@@ -638,7 +711,7 @@ tr:last-child {
   border-right: none;
 }
 
-/* Borderless Tables */
+/* Legacy support - use table-borderless instead */
 .borderless-table {
   width: 100%;
   border-collapse: separate;
@@ -665,6 +738,7 @@ tr:last-child {
   text-align: center;
 }
 
+/* Legacy support - use input-base w-full instead */
 .borderless-input {
   width: 100%;
   border: none;

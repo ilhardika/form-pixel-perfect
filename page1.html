@@ -472,28 +472,28 @@
               <tr class="table-row">
                 <td class="table-cell">
                   <label>Dimensions:</label>
-                  <input type="text" class="text-input" />
+                  <input type="text" class="input-base input-md" />
                 </td>
                 <td class="table-cell" colspan="3">
                   <label>Site Area:</label>
-                  <input type="text" class="text-input" />
+                  <input type="text" class="input-base input-md" />
                 </td>
               </tr>
 
               <!-- Row 2: Zoning Classification, Description, and Compliance -->
               <tr class="table-row">
                 <td class="table-cell" colspan="4">
-                  <div class="multi-line-cell">
-                    <div class="cell-line">
+                  <div class="flex flex-col gap-1">
+                    <div class="flex items-center gap-1 flex-wrap pb-2 mb-2">
                       <label>Zoning Classification:</label>
-                      <input type="text" class="text-input bordered-input" />
+                      <input type="text" class="input-base input-md" />
                       <label>Description:</label>
                       <input
                         type="text"
-                        class="text-input bordered-input wide-input"
+                        class="input-base flex-1 min-w-300 max-w-500"
                       />
                     </div>
-                    <div class="cell-line">
+                    <div class="flex items-center gap-1 flex-wrap">
                       <label>Zoning Compliance:</label>
                       <label><input type="checkbox" /> Legal</label>
                       <label
@@ -510,8 +510,8 @@
               <!-- Row 3: CC&Rs, Ground Rent, and Comments -->
               <tr class="table-row">
                 <td class="table-cell" colspan="4">
-                  <div class="multi-line-cell">
-                    <div class="cell-line">
+                  <div class="flex flex-col gap-1">
+                    <div class="flex items-center gap-1 flex-wrap pb-2 mb-2">
                       <label>Are CC&Rs applicable?</label>
                       <label><input type="checkbox" /> Yes</label>
                       <label><input type="checkbox" /> No</label>
@@ -521,13 +521,13 @@
                       <label><input type="checkbox" /> No</label>
                       <label>Ground Rent (if applicable)</label>
                       <span>$</span>
-                      <input type="text" class="text-input" />
+                      <input type="text" class="input-base input-md" />
                       <span>/</span>
-                      <input type="text" class="text-input" />
+                      <input type="text" class="input-base input-md" />
                     </div>
-                    <div class="cell-line">
+                    <div class="flex items-center gap-1 flex-wrap">
                       <label>Comments:</label>
-                      <input type="text" class="text-input full-width" />
+                      <input type="text" class="input-base w-full" />
                     </div>
                   </div>
                 </td>
@@ -536,41 +536,41 @@
               <!-- Row 4: Highest & Best Use -->
               <tr class="table-row">
                 <td class="table-cell" colspan="4">
-                  <div class="multi-line-cell">
-                    <div class="cell-line">
+                  <div class="flex flex-col gap-1">
+                    <div class="flex items-center gap-1 flex-wrap pb-2 mb-2">
                       <label>Highest & Best Use as improved:</label>
                       <label><input type="checkbox" /> Present use, or</label>
                       <label
                         ><input type="checkbox" /> Other use (explain)</label
                       >
-                      <input type="text" class="text-input" />
+                      <input type="text" class="input-base input-md" />
                     </div>
-                    <div class="cell-line">
+                    <div class="flex items-center gap-1 flex-wrap">
                       <label>Actual Use as of Effective Date:</label>
-                      <input type="text" class="text-input" />
+                      <input type="text" class="input-base input-md" />
                       <label>Use as appraised in this report:</label>
-                      <input type="text" class="text-input" />
+                      <input type="text" class="input-base input-md" />
                     </div>
                   </div>
                 </td>
               </tr>
 
               <!-- Row 5: Summary -->
-              <tr class="table-row summary-row">
+              <tr class="table-row">
                 <td class="table-cell" colspan="4">
                   <label>Summary of Highest & Best Use:</label>
                   <br />
-                  <textarea class="textarea-input" rows="3"></textarea>
+                  <textarea class="input-base w-full" rows="3"></textarea>
                 </td>
               </tr>
 
               <!-- Row 6: Utilities, Off-site Improvements, and Frontage Tables -->
               <tr class="table-row">
                 <td class="table-cell" colspan="4">
-                  <div class="three-tables-container">
+                  <div class="flex gap-0 relative">
                     <!-- Utilities Table -->
-                    <div class="table-section">
-                      <table class="borderless-table">
+                    <div class="flex-1 px-2 relative">
+                      <table class="table-borderless">
                         <tr>
                           <th>Utilities</th>
                           <th>Public</th>
@@ -582,7 +582,7 @@
                           <td><input type="checkbox" /></td>
                           <td><input type="checkbox" /></td>
                           <td>
-                            <input type="text" class="borderless-input" />
+                            <input type="text" class="input-base w-full" />
                           </td>
                         </tr>
                         <tr>
@@ -590,7 +590,7 @@
                           <td><input type="checkbox" /></td>
                           <td><input type="checkbox" /></td>
                           <td>
-                            <input type="text" class="borderless-input" />
+                            <input type="text" class="input-base w-full" />
                           </td>
                         </tr>
                         <tr>
@@ -598,7 +598,7 @@
                           <td><input type="checkbox" /></td>
                           <td><input type="checkbox" /></td>
                           <td>
-                            <input type="text" class="borderless-input" />
+                            <input type="text" class="input-base w-full" />
                           </td>
                         </tr>
                         <tr>
@@ -606,7 +606,7 @@
                           <td><input type="checkbox" /></td>
                           <td><input type="checkbox" /></td>
                           <td>
-                            <input type="text" class="borderless-input" />
+                            <input type="text" class="input-base w-full" />
                           </td>
                         </tr>
                         <tr>
@@ -614,7 +614,7 @@
                           <td><input type="checkbox" /></td>
                           <td><input type="checkbox" /></td>
                           <td>
-                            <input type="text" class="borderless-input" />
+                            <input type="text" class="input-base w-full" />
                           </td>
                         </tr>
                         <tr>
@@ -622,7 +622,7 @@
                           <td><input type="checkbox" /></td>
                           <td><input type="checkbox" /></td>
                           <td>
-                            <input type="text" class="borderless-input" />
+                            <input type="text" class="input-base w-full" />
                           </td>
                         </tr>
                         <tr>
@@ -630,15 +630,15 @@
                           <td><input type="checkbox" /></td>
                           <td><input type="checkbox" /></td>
                           <td>
-                            <input type="text" class="borderless-input" />
+                            <input type="text" class="input-base w-full" />
                           </td>
                         </tr>
                       </table>
                     </div>
 
                     <!-- Off-site Improvements Table -->
-                    <div class="table-section">
-                      <table class="borderless-table">
+                    <div class="flex-1 px-2 relative">
+                      <table class="table-borderless">
                         <tr>
                           <th>Off-site Improvements</th>
                           <th>Type</th>
@@ -648,7 +648,7 @@
                         <tr>
                           <td>Street</td>
                           <td>
-                            <input type="text" class="borderless-input" />
+                            <input type="text" class="input-base w-full" />
                           </td>
                           <td><input type="checkbox" /></td>
                           <td><input type="checkbox" /></td>
@@ -656,7 +656,7 @@
                         <tr>
                           <td>Width</td>
                           <td>
-                            <input type="text" class="borderless-input" />
+                            <input type="text" class="input-base w-full" />
                           </td>
                           <td></td>
                           <td></td>
@@ -664,7 +664,7 @@
                         <tr>
                           <td>Surface</td>
                           <td>
-                            <input type="text" class="borderless-input" />
+                            <input type="text" class="input-base w-full" />
                           </td>
                           <td></td>
                           <td></td>
@@ -672,7 +672,7 @@
                         <tr>
                           <td>Curb/Gutter</td>
                           <td>
-                            <input type="text" class="borderless-input" />
+                            <input type="text" class="input-base w-full" />
                           </td>
                           <td><input type="checkbox" /></td>
                           <td><input type="checkbox" /></td>
@@ -680,7 +680,7 @@
                         <tr>
                           <td>Sidewalk</td>
                           <td>
-                            <input type="text" class="borderless-input" />
+                            <input type="text" class="input-base w-full" />
                           </td>
                           <td><input type="checkbox" /></td>
                           <td><input type="checkbox" /></td>
@@ -688,7 +688,7 @@
                         <tr>
                           <td>Street Lights</td>
                           <td>
-                            <input type="text" class="borderless-input" />
+                            <input type="text" class="input-base w-full" />
                           </td>
                           <td><input type="checkbox" /></td>
                           <td><input type="checkbox" /></td>
@@ -696,7 +696,7 @@
                         <tr>
                           <td>Alley</td>
                           <td>
-                            <input type="text" class="borderless-input" />
+                            <input type="text" class="input-base w-full" />
                           </td>
                           <td><input type="checkbox" /></td>
                           <td><input type="checkbox" /></td>
@@ -705,8 +705,8 @@
                     </div>
 
                     <!-- Frontage Table -->
-                    <div class="table-section">
-                      <table class="borderless-table">
+                    <div class="flex-1 px-2 relative">
+                      <table class="table-borderless">
                         <tr>
                           <th>Frontage</th>
                           <th>Typical</th>
@@ -714,31 +714,31 @@
                         <tr>
                           <td>Topography</td>
                           <td>
-                            <input type="text" class="borderless-input" />
+                            <input type="text" class="input-base w-full" />
                           </td>
                         </tr>
                         <tr>
                           <td>Size</td>
                           <td>
-                            <input type="text" class="borderless-input" />
+                            <input type="text" class="input-base w-full" />
                           </td>
                         </tr>
                         <tr>
                           <td>Shape</td>
                           <td>
-                            <input type="text" class="borderless-input" />
+                            <input type="text" class="input-base w-full" />
                           </td>
                         </tr>
                         <tr>
                           <td>Drainage</td>
                           <td>
-                            <input type="text" class="borderless-input" />
+                            <input type="text" class="input-base w-full" />
                           </td>
                         </tr>
                         <tr>
                           <td>View</td>
                           <td>
-                            <input type="text" class="borderless-input" />
+                            <input type="text" class="input-base w-full" />
                           </td>
                         </tr>
                       </table>
@@ -756,7 +756,7 @@
                   <label><input type="checkbox" /> Cul de Sac</label>
                   <label><input type="checkbox" /> Underground Utilities</label>
                   <label><input type="checkbox" /> Other (describe)</label>
-                  <input type="text" class="text-input" />
+                  <input type="text" class="input-base input-md" />
                 </td>
               </tr>
 
@@ -767,11 +767,11 @@
                   <label><input type="checkbox" /> Yes</label>
                   <label><input type="checkbox" /> No</label>
                   <label>FEMA Flood Zone:</label>
-                  <input type="text" class="text-input" />
+                  <input type="text" class="input-base input-md" />
                   <label>FEMA Map #:</label>
-                  <input type="text" class="text-input" />
+                  <input type="text" class="input-base input-md" />
                   <label>FEMA Map Date:</label>
-                  <input type="text" class="text-input" />
+                  <input type="text" class="input-base input-md" />
                 </td>
               </tr>
 
@@ -780,7 +780,7 @@
                 <td class="table-cell" colspan="4">
                   <label>Site Comments:</label>
                   <br />
-                  <textarea class="textarea-input" rows="3"></textarea>
+                  <textarea class="input-base w-full" rows="3"></textarea>
                 </td>
               </tr>
             </table>
