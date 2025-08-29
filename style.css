@@ -156,11 +156,11 @@ ion {
 }
 
 .table-cell {
-  padding: 6px 12px;
   vertical-align: middle;
   position: relative;
   white-space: nowrap;
   overflow: visible;
+  padding: 8px 12px;
 }
 
 .table-cell:last-child {
@@ -311,6 +311,146 @@ ion {
 
 .summary-row .table-cell {
   border-top: none !important;
+}
+
+/* Utilities, Off-site, and Frontage Tables */
+.utilities-table,
+.offsite-table,
+.frontage-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.utilities-table th,
+.offsite-table th,
+.frontage-table th,
+.utilities-table td,
+.offsite-table td,
+.frontage-table td {
+  border: 1px solid #000;
+  padding: 2px 4px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.utilities-table th,
+.offsite-table th,
+.frontage-table th {
+  background-color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+}
+
+.utility-input,
+.offsite-input,
+.frontage-input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-size: 12px;
+  padding: 1px;
+}
+
+.utilities-table td:first-child,
+.offsite-table td:first-child,
+.frontage-table td:first-child {
+  font-weight: normal;
+  background-color: #f8f8f8;
+}
+
+.utilities-table td:nth-child(2),
+.utilities-table td:nth-child(3),
+.offsite-table td:nth-child(3),
+.offsite-table td:nth-child(4) {
+  text-align: center;
+  width: 40px;
+}
+
+.utilities-table th:nth-child(2),
+.utilities-table th:nth-child(3) {
+  width: 50px;
+}
+
+.offsite-table th:nth-child(3),
+.offsite-table th:nth-child(4) {
+  width: 50px;
+}
+
+/* Three Tables Container - Side by Side Layout */
+.three-tables-container {
+  display: flex;
+  gap: 0px;
+  position: relative;
+}
+
+.table-section {
+  flex: 1;
+  padding: 0 10px;
+  position: relative;
+}
+
+.table-section:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -10px;
+  bottom: -10px;
+  width: 1px;
+  background-color: #000;
+  z-index: 10;
+}
+
+.table-section:last-child {
+  border-right: none;
+}
+
+/* Borderless Tables */
+.borderless-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 12px;
+  border: none;
+}
+
+.borderless-table th,
+.borderless-table td {
+  border: none !important;
+  padding: 6px 8px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.borderless-table th {
+  font-weight: bold;
+  text-align: center;
+}
+
+.borderless-table th {
+  font-weight: bold;
+  text-align: center;
+}
+
+.borderless-input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-size: 12px;
+  padding: 1px;
+}
+
+.borderless-table td:first-child {
+  font-weight: normal;
+  min-width: 100px;
+}
+
+.borderless-table td:nth-child(2),
+.borderless-table td:nth-child(3),
+.borderless-table td:nth-child(4) {
+  text-align: center;
+  width: 60px;
 }
 
 /* Section Content */
