@@ -147,8 +147,56 @@ ion {
   table-layout: fixed;
 }
 
+.property-table tr {
+  border-bottom: 1px solid #000 !important;
+}
+
+.property-table tr:last-child {
+  border-bottom: none !important;
+}
+
+/* Ensure all table rows have borders - very specific selectors */
+table.property-table > tbody > tr {
+  border-bottom: 1px solid #000 !important;
+}
+
+table.property-table > tbody > tr:last-child {
+  border-bottom: none !important;
+}
+
+/* Additional enforcement for any missed rows */
+.section-content table tr {
+  border-bottom: 1px solid #000 !important;
+}
+
+.section-content table tr:last-child {
+  border-bottom: none !important;
+}
+
+/* Very aggressive border enforcement */
+tr {
+  border-bottom: 1px solid #000 !important;
+}
+
+tr:last-child {
+  border-bottom: none !important;
+}
+
+/* Override any borderless styling for main form tables */
+.section-content tr {
+  border-bottom: 1px solid #000 !important;
+}
+
+.section-content tr:last-child {
+  border-bottom: none !important;
+}
+
 .table-row {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #000 !important;
+}
+
+.property-table .table-row {
+  border-bottom: 1px solid #000 !important;
 }
 
 .table-row:last-child {
@@ -289,6 +337,14 @@ ion {
   align-items: center;
   gap: 6px;
   flex-wrap: wrap;
+  border-bottom: 1px solid #000;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+
+.cell-line:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
 }
 
 /* Bordered inputs for zoning and description */
